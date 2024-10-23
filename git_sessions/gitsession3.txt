@@ -1,0 +1,18 @@
+import os
+def check_attributes(file_path):
+    if os.path.exists(file_path):
+       fp = open(file_path,"r")
+       fname = os.path.basename(file_path) 
+       print(f'File {fname} exists opened it in read mode ')
+       print('---this program demonstrates the readlines() which returns a list ----')
+       lst= fp.readlines()
+       fp.close()
+       how = len(lst)
+       for j in range(0,how):
+           print(j,' ',lst[j])
+
+print('---in start of the MAIN BLOCK ----')
+fpath = "D:\\temp3\September_2024\\"
+fname = input('Pls enter the file name  ')
+check_attributes(fpath+fname)
+print('---in END of the MAIN BLOCK ----')
