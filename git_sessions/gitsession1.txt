@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+countries = ['India','France','England'] 
+capitals = ['New Delhi','Paris','London'] 
+arr = np.array(capitals) 
+dicts = {'a':10, 'b':20, 'c':30, 'd':40, 'e':50, 'f':60, 'g':70, 'h':80}
+
+r1 = pd.Series(data = countries)  # creating Series From List
+#print(r1)
+r2 = pd.Series(data = capitals, index = countries)  # Setting custom labels for our series
+#print(r2)
+r3 = pd.Series(arr)   #Creating a Series from Numpy array
+#print(r3)
+r4 = pd.Series(dicts)   #Creating a Series from dictionary
+#print(r4)
+print()
+#print(r4 // r4)
+series_shape=pd.Series(data=[11.2,18.6,22.5,25.2], index=['a','b','c','d']) 
+print(series_shape.shape)
